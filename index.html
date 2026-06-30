@@ -441,6 +441,16 @@
                 box-sizing: border-box;
             }
         }
+
+        /* Small Mobile (iPhone 12/13 mini, SE, older devices) */
+        @media (max-width: 375px) {
+            .nav-content img { height: 40px; }
+            .btn-primary { padding: 5px 10px; font-size: 0.75rem; }
+            
+            .hero {
+                padding-top: calc(15svh + 50px);
+            }
+        }
     </style>
 </head>
 <body>
