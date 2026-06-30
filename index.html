@@ -113,17 +113,17 @@
         }
 
         /* --- Vision / Hero Section --- */
+        /* --- Base Desktop Styles --- */
         .hero {
-            height: calc(100vh - 135px); 
-            min-height: 400px;
+            height: 100vh; /* Fallback */
+            height: 100svh;
             display: flex;
             flex-direction: column;
-            justify-content: center; 
+            justify-content: flex-start;
             align-items: center;
             text-align: center;
-            padding: 0px 20px;
-            background: transparent; 
-            position: relative; 
+            padding-top: 25vh; /* Larger gap for big screens */
+            box-sizing: border-box;
         }
 
         .hero h1 {
@@ -406,12 +406,16 @@
                 font-size: 0.9rem;
             }
             .hero {
-                padding: 40px 20px 150px 20px;
-                height: auto; 
-                min-height: 300px;
+                padding: 80px 20px 150px 20px;
             }
-            .hero h2 {
-                font-size: 2.2rem;
+            .hero h1 {
+                font-size: 2rem; /* Adjusted from 3rem to 2rem */
+                line-height: 1.2; /* Tighten line height for better mobile readability */
+                margin-bottom: 15px;
+            }
+            
+            .hero p {
+                font-size: 1.1rem; /* Slightly smaller subtext fits better */
             }
             
             /* Navigation spacing */
