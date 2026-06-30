@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Circulant Labs develops neuro-inspired AI and neuromorphic solutions for the next generation of computing.">
+    
+    <meta property="og:title" content="Circulant Labs">
+    <meta property="og:description" content="Circulant Labs develops neuro-inspired AI and neuromorphic solutions for the next generation of computing.">
+    <meta property="og:image" content="https://circulant.ai/social-preview.png"> 
+    <meta property="og:url" content="https://circulant.ai">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Circulant Labs</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    
+    <script src="js/tsparticles.bundle.min.js"></script>
+    
+    <style>
+        /* --- Base & Variables --- */
+        :root {
+            --primary-navy: #273d52;
+            --primary-teal: #389583;
+            --bg-light: #f8fbfb;
+            --text-main: #333333;
+            --text-muted: #666666;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            background-color: transparent; 
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* --- Particle Background Container Styles --- */
+        #tsparticles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; 
+            background-color: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+
+        /* --- Buttons --- */
+        .btn-primary {
+            background-color: var(--primary-teal);
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(56, 149, 131, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #2c7a6b;
+            transform: translateY(-2px);
+        }
+
+        /* --- Navigation --- */
+        nav .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-content img {
+            height: 105px;
+            margin-right: 0px;
+            padding-top: 12px;
+            transition: height 0.3s ease;
+        }
+
+        .nav-content h1 {
+            margin: 0;
+            color: var(--primary-navy);
+            font-size: 1.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        /* --- Vision / Hero Section --- */
+        .hero {
+            height: calc(100vh - 135px); 
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            text-align: center;
+            padding: 0px 20px;
+            background: transparent; 
+            position: relative; 
+        }
+
+        .hero h1 {
+            color: var(--primary-navy);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- Technologies Section --- */
+        .tech-section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease;
+            position: relative; 
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .card-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            color: var(--primary-teal);
+            margin-top: 0;
+        }
+
+        /* --- Ecosystem Section --- */
+        .ecosystem {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative; 
+        }
+
+        .ecosystem .grid-3 {
+            display: flex;        /* Changes layout to flex */
+            justify-content: center; /* Keeps them centered */
+            gap: 50px;            /* This pulls the cards together */
+            margin-top: 20px;
+}
+
+        .ecosystem h2 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .ecosystem-img {
+            width: 100%;
+            max-width: 825px;
+            margin: 0 auto 40px auto;
+            display: block;
+            border-radius: 12px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        .ecosystem .card {
+            max-width: 350px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: none;
+        }
+
+        .ecosystem .card-content h3 {
+            color: #ffffff;
+        }
+
+        .ecosystem .card-content p {
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+
+        /* --- Founders Section --- */
+        .founders {
+            padding: 120px 0; 
+            text-align: center;
+            position: relative;
+            min-height: 80vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+        }
+
+        .founders h2 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 60px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+            gap: 60px;
+            justify-content: center;
+        }
+
+        .founder-profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #e2e8f0;
+            margin-bottom: 20px;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .founder-profile h3 {
+            color: var(--primary-navy);
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+        }
+
+        .founder-profile p {
+            color: var(--text-muted);
+        }
+
+        /* Mobile responsiveness: Stack the image on top of text for small screens */
+        @media (max-width: 600px) {
+            .paper-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .paper-img {
+                width: 100%;
+                height: 140px;
+            }
+        }
+
+        /* --- Join Us Section --- */
+        .bg-soft-teal {
+            background-color: hsla(172, 36%, 41%, 0.15);
+            backdrop-filter: blur(5px); 
+            -webkit-backdrop-filter: blur(5px);
+            
+            /* Subtle, semi-transparent teal line */
+            border-top: 1px solid rgba(56, 149, 131, 0.2); 
+        }
+
+        .join-us .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: stretch; 
+        }
+
+        /* 1. Frosted Glass Effect & Reduced Padding */
+        .join-us .card {
+            display: flex;
+            flex-direction: column; 
+            padding: 10px; /* Reduced from 25px to shrink overall height */
+            height: 100%; 
+            background: rgba(255, 255, 255, 0.65); /* More transparent */
+            backdrop-filter: blur(10px); /* Creates the frosted glass look */
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.4); /* Subtle edge to define the shape */
+        }
+
+        .join-us .card-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; 
+        }
+
+        /* 2. Tighten up text spacing inside the cards */
+        .join-us .card-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .join-us .card-content p {
+            margin-bottom: 15px;
+            font-size: 0.95rem; /* Slightly smaller text to reduce vertical footprint */
+        }
+
+        /* 3. Keep buttons aligned, but slightly more compact */
+        .email-display {
+            display: inline-block;
+            margin-top: auto; /* Keeps it pushed to the bottom */
+            padding: 6px 12px; /* Slightly slimmer top/bottom padding */
+            background-color: #f8fbfb;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.85rem; /* Scaled down slightly */
+            color: var(--primary-navy);
+            text-decoration: none;
+            align-self: center; 
+            transition: all 0.2s ease;
+        }
+
+        .email-display:hover {
+            border-color: var(--primary-teal);
+            background-color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        /* --- Footer (Impressum & Contact) --- */
+        footer {
+            background-color: #1a2836;
+            color: #94a3b8;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
+        .footer-section h4 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p {
+            margin: 5px 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* --- Mobile Responsive Rules --- */
+        @media (max-width: 768px) {
+            /* Logo and Header adjustments */
+            .nav-content img {
+                height: 65px;
+                padding-top: 5px;
+            }
+            .btn-primary {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            .hero {
+                padding: 180px 20px 150px 20px;
+            }
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            /* Navigation spacing */
+            nav .nav-content {
+                padding: 10px 15px;
+            }
+
+            /* Join Us Section: Stacked layout with vertical spacing */
+            .join-us .grid-3 {
+                display: flex;
+                flex-direction: column;
+                gap: 30px; /* Forces vertical separation */
+            }
+
+            /* Join Us Section: Ensure cards don't squish */
+            .join-us .card {
+                height: auto;
+                min-height: 220px;
+                
+                /* Insetting the cards */
+                width: calc(100% - 40px); /* Subtract 40px total for margins */
+                margin: 0 auto;           /* Centers the card horizontally */
+                
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="tsparticles"></div>
+
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="nav-brand">
+                <img src="logo_transparent.png" alt="Circulant Labs Logo">
+            </a>
+            <a href="mailto:info@circulant.ai" class="btn-primary">Get in Touch</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Unifying Biological and Artificial Intelligence</h1>
+            <p>Building intelligent systems of the future.</p>
+        </div>
+    </header>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@circulant.ai</p>
+            </div>
+            <div class="footer-section">
+                <h4>Circulant GmbH</h4>
+                <p>Märkerwaldstr. 162</p>
+                <p>64625 Bensheim, Germany</p>
+            </div>
+            <div class="footer-section">
+                <h4>Impressum</h4>
+                <p>Managing Partners: Dr. Tristan M Stöber, Dr. Andrew B Lehr</p>
+                <p>Commercial Register: Amtsgericht Darmstadt, HRB 109178</p>
+                <p>VAT ID: DE461673423</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Circulant GmbH. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        tsParticles.load("tsparticles", {
+            particles: {
+                number: { 
+                    value: 80,
+                    density: { enable: true, value_area: 1300 } 
+                },
+                color: { value: ["#273d52", "#389583"] },
+                shape: { type: "circle" },
+                opacity: { value: 0.2 },
+                size: { value: 3 },
+                links: {
+                    enable: true,
+                    distance: 150,
+                    color: "#389583",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1
+                }
+            },
+            interactivity: {
+                events: { onHover: { enable: true, mode: "grab" } }
+            },
+            // Responsive particles: reduce density on mobile
+            responsive: [{
+                maxWidth: 768,
+                options: {
+                    particles: { number: { value: 30 } }
+                }
+            }]
+        });
+
+        
+    </script>
+</body>
+</html>
