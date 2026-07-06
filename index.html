@@ -583,34 +583,54 @@
     <!-- AI & Search Engine Schema Summary -->
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": "Circulant Labs",
-          "url": "https://circulant.ai",
-          "description": "Circulant Labs is unifying biological and artificial intelligence to build intelligent systems of the future.",
-          "abstract": "Circulant Labs is unifying biological and artificial intelligence to build intelligent systems of the future. The company focuses on neuro-inspired AI, neuromorphic computing, and neurotechnology, and was co-founded by Dr. Tristan M Stöber and Dr. Andrew B Lehr.",
-          "about": {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
             "@type": "Organization",
+            "@id": "https://circulant.ai",
             "name": "Circulant Labs",
             "legalName": "Circulant GmbH",
-            "slogan": "Unifying Biological and Artificial Intelligence",
             "url": "https://circulant.ai",
             "email": "info@circulant.ai",
+            "slogan": "Unifying Biological and Artificial Intelligence",
+            "description": "Circulant Labs is unifying biological and artificial intelligence to build intelligent systems of the future, focusing on neuro-inspired AI, neuromorphic computing, and neurotechnology. Founded by Dr. Andrew B Lehr and Dr. Tristan M Stöber.",
             "founder": [
-              {
-                "@type": "Person",
-                "name": "Dr. Tristan M Stöber",
-                "jobTitle": "Co-Founder"
-              },
-              {
+                {
                 "@type": "Person",
                 "name": "Dr. Andrew B Lehr",
-                "jobTitle": "Co-Founder"
-              }
+                "jobTitle": "Co-Founder",
+                "sameAs": [
+                    "https://scholar.google.com/citations?hl=en&user=zpu9tugAAAAJ&view_op=list_works&sortby=pubdate", 
+                    "https://www.linkedin.com/in/andrewblehr/"
+                ]
+                }
+                {
+                "@type": "Person",
+                "name": "Dr. Tristan M Stöber",
+                "jobTitle": "Co-Founder",
+                "sameAs": [
+                    "https://scholar.google.com/citations?hl=en&user=JghW0NoAAAAJ&view_op=list_works&sortby=pubdate",
+                    "https://www.linkedin.com/in/tristan-manfred-stöber-ph-d-941b34160/"
+                ]
+                },
+            ],
+            "sameAs": [
+                "https://github.com/Circulant-Labs"
             ]
-          }
+            },
+            {
+            "@type": "WebPage",
+            "@id": "https://circulant.ai",
+            "url": "https://circulant.ai",
+            "name": "Circulant Labs",
+            "description": "Circulant Labs is unifying biological and artificial intelligence to build intelligent systems of the future.",
+            "about": {
+                "@id": "https://circulant.ai"
+            }
+            }
+        ]
         }
-    </script>
+    </script>    
 </head>
 <body>
 
